@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mockups do Site - FE</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --primary: #2563eb;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #e2e8f0;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+      background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      margin-bottom: 20px;
+    }
+
+    h1 { margin: 0 0 8px; font-size: 2rem; }
+    p { margin: 0; color: var(--muted); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .mockup {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+    }
+
+    .mockup-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .tag {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--primary);
+      background: #dbeafe;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+
+    .title { font-weight: 700; }
+
+    .preview {
+      background: var(--bg);
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .browser {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .browser-top {
+      height: 30px;
+      border-bottom: 1px solid var(--border);
+      background: #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 10px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #94a3b8;
+    }
+
+    .wire {
+      height: 160px;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 8px;
+    }
+
+    .wire .block {
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #f8fafc;
+    }
+
+    .wire .main {
+      display: grid;
+      gap: 8px;
+      grid-template-rows: 24px 1fr 1fr;
+    }
+
+    .app-base {
+      border: 1px dashed #bfdbfe;
+      border-radius: 12px;
+      background: #eff6ff;
+      padding: 10px;
+    }
+
+    .app-base strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #1d4ed8;
+      font-size: 12px;
+    }
+
+    .thumbs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .thumbs img {
+      width: 100%;
+      height: 84px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #bfdbfe;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>Mockups do Site (baseados nos mockups da App)</h1>
+      <p>Estrutura visual do website criada com a mesma identidade: azul principal, fundo claro e blocos funcionais das telas mobile.</p>
+    </section>
+
+    <section class="grid">
+      <article class="mockup">
+        <header class="mockup-header">
+          <span class="title">Landing + Tutorial</span>
+          <span class="tag">Web 01</span>
+        </header>
+        <div class="preview">
+          <div class="browser">
+            <div class="browser-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="wire">
+              <div class="block"></div>
+              <div class="main">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+              </div>
+            </div>
+          </div>
+          <div class="app-base">
+            <strong>Base da app:</strong>
+            <div class="thumbs">
+              <img src="mockups da app/Login.svg" alt="Mockup app login" />
+              <img src="mockups da app/Tutorial.svg" alt="Mockup app tutorial" />
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="mockup">
+        <header class="mockup-header">
+          <span class="title">Dashboard do Utilizador</span>
+          <span class="tag">Web 02</span>
+        </header>
+        <div class="preview">
+          <div class="browser">
+            <div class="browser-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="wire">
+              <div class="block"></div>
+              <div class="main">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+              </div>
+            </div>
+          </div>
+          <div class="app-base">
+            <strong>Base da app:</strong>
+            <div class="thumbs">
+              <img src="mockups da app/Dashboard Principal.svg" alt="Mockup app dashboard" />
+              <img src="mockups da app/Dados do Inalador.svg" alt="Mockup app dados do inalador" />
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="mockup">
+        <header class="mockup-header">
+          <span class="title">Histórico + Lembretes</span>
+          <span class="tag">Web 03</span>
+        </header>
+        <div class="preview">
+          <div class="browser">
+            <div class="browser-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="wire">
+              <div class="block"></div>
+              <div class="main">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+              </div>
+            </div>
+          </div>
+          <div class="app-base">
+            <strong>Base da app:</strong>
+            <div class="thumbs">
+              <img src="mockups da app/Histórico.svg" alt="Mockup app histórico" />
+              <img src="mockups da app/Lembretes.svg" alt="Mockup app lembretes" />
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="mockup">
+        <header class="mockup-header">
+          <span class="title">Perfil + Definições</span>
+          <span class="tag">Web 04</span>
+        </header>
+        <div class="preview">
+          <div class="browser">
+            <div class="browser-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="wire">
+              <div class="block"></div>
+              <div class="main">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+              </div>
+            </div>
+          </div>
+          <div class="app-base">
+            <strong>Base da app:</strong>
+            <div class="thumbs">
+              <img src="mockups da app/Perfil.svg" alt="Mockup app perfil" />
+              <img src="mockups da app/Definições.svg" alt="Mockup app definições" />
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
