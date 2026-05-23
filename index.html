@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inalador Inteligente</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f9ff;
+      --card: #ffffff;
+      --accent: #1f6feb;
+      --accent-dark: #174ea6;
+      --text: #1f2937;
+      --muted: #4b5563;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(130deg, #1f6feb, #58a6ff);
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3rem;
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    section {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .app-banner {
+      background: #0f172a;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .app-banner p {
+      color: #d1d5db;
+      margin: 0 auto 1rem;
+      max-width: 45rem;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.7rem 1.2rem;
+      border-radius: 999px;
+      font-weight: bold;
+    }
+
+    .buttons a:hover {
+      background: var(--accent-dark);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem 2rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Inalador Inteligente</h1>
+    <p>Tecnologia biomédica para melhorar o controlo da saúde respiratória.</p>
+  </header>
+
+  <main>
+    <section id="problema">
+      <h2>O problema</h2>
+      <p>Pessoas com doenças respiratórias enfrentam esquecimentos de toma, uso incorreto do inalador e dificuldade em acompanhar a evolução dos sintomas ao longo do tempo.</p>
+    </section>
+
+    <section id="solucao">
+      <h2>A nossa solução</h2>
+      <p>Desenvolvemos um Inalador Inteligente que regista automaticamente cada utilização, monitoriza a técnica de inalação e envia dados para uma app para facilitar o acompanhamento diário.</p>
+    </section>
+
+    <section class="app-banner" id="app">
+      <h2>App do Inalador</h2>
+      <p>A app oferece lembretes personalizados, gráficos de adesão ao tratamento e partilha segura de relatórios com profissionais de saúde.</p>
+      <div class="buttons">
+        <a href="#">Descarregar para Android</a>
+        <a href="#">Descarregar para iOS</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Inalador Inteligente • Projeto académico de Formação Empresarial
+  </footer>
+</body>
+</html>
