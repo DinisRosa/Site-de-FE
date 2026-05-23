@@ -1,0 +1,5 @@
+CORES:
+004AC6,191C1E,434655,737686,006B5F,FFFFFF,007165,1D4ED8,F2F4F6,360F00,003EA8,64748B,943700,E6E8EA,EFF6FF,F7F9FB,FFDBCD
+
+PÁGINAS:
+Dados do Inalador, Dashboard Principal, Definições, Editar Perfil, Histórico, Lembretes, Login, Perfil, Registro Inalação, Toturial
