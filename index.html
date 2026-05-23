@@ -1,276 +1,133 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mockups do Site - FE</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inalador Inteligente</title>
   <style>
     :root {
-      --bg: #f8fafc;
-      --surface: #ffffff;
-      --primary: #2563eb;
-      --text: #0f172a;
-      --muted: #64748b;
-      --border: #e2e8f0;
+      color-scheme: light;
+      --bg: #f4f9ff;
+      --card: #ffffff;
+      --accent: #1f6feb;
+      --accent-dark: #174ea6;
+      --text: #1f2937;
+      --muted: #4b5563;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
-      font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
-      background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
-      color: var(--text);
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 24px;
-    }
-
-    .hero {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
-      margin-bottom: 20px;
-    }
-
-    h1 { margin: 0 0 8px; font-size: 2rem; }
-    p { margin: 0; color: var(--muted); }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-    }
-
-    .mockup {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
-    }
-
-    .mockup-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 14px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .tag {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--primary);
-      background: #dbeafe;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-
-    .title { font-weight: 700; }
-
-    .preview {
+      font-family: Arial, sans-serif;
       background: var(--bg);
-      padding: 12px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(130deg, #1f6feb, #58a6ff);
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3rem;
       display: grid;
-      gap: 10px;
+      gap: 1.25rem;
     }
 
-    .browser {
-      border: 1px solid var(--border);
+    section {
+      background: var(--card);
       border-radius: 12px;
-      background: #fff;
-      overflow: hidden;
+      padding: 1.5rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     }
 
-    .browser-top {
-      height: 30px;
-      border-bottom: 1px solid var(--border);
-      background: #f1f5f9;
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .app-banner {
+      background: #0f172a;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .app-banner p {
+      color: #d1d5db;
+      margin: 0 auto 1rem;
+      max-width: 45rem;
+    }
+
+    .buttons {
       display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 0 10px;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
     }
 
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #94a3b8;
+    .buttons a {
+      text-decoration: none;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.7rem 1.2rem;
+      border-radius: 999px;
+      font-weight: bold;
     }
 
-    .wire {
-      height: 160px;
-      padding: 10px;
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 8px;
+    .buttons a:hover {
+      background: var(--accent-dark);
     }
 
-    .wire .block {
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      background: #f8fafc;
-    }
-
-    .wire .main {
-      display: grid;
-      gap: 8px;
-      grid-template-rows: 24px 1fr 1fr;
-    }
-
-    .app-base {
-      border: 1px dashed #bfdbfe;
-      border-radius: 12px;
-      background: #eff6ff;
-      padding: 10px;
-    }
-
-    .app-base strong {
-      display: block;
-      margin-bottom: 8px;
-      color: #1d4ed8;
-      font-size: 12px;
-    }
-
-    .thumbs {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
-    }
-
-    .thumbs img {
-      width: 100%;
-      height: 84px;
-      object-fit: cover;
-      border-radius: 8px;
-      border: 1px solid #bfdbfe;
-      background: #fff;
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem 2rem;
+      color: var(--muted);
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <main class="container">
-    <section class="hero">
-      <h1>Mockups do Site (baseados nos mockups da App)</h1>
-      <p>Estrutura visual do website criada com a mesma identidade: azul principal, fundo claro e blocos funcionais das telas mobile.</p>
+  <header>
+    <h1>Inalador Inteligente</h1>
+    <p>Tecnologia biomédica para melhorar o controlo da saúde respiratória.</p>
+  </header>
+
+  <main>
+    <section id="problema">
+      <h2>O problema</h2>
+      <p>Pessoas com doenças respiratórias enfrentam esquecimentos de toma, uso incorreto do inalador e dificuldade em acompanhar a evolução dos sintomas ao longo do tempo.</p>
     </section>
 
-    <section class="grid">
-      <article class="mockup">
-        <header class="mockup-header">
-          <span class="title">Landing + Tutorial</span>
-          <span class="tag">Web 01</span>
-        </header>
-        <div class="preview">
-          <div class="browser">
-            <div class="browser-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-            <div class="wire">
-              <div class="block"></div>
-              <div class="main">
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-              </div>
-            </div>
-          </div>
-          <div class="app-base">
-            <strong>Base da app:</strong>
-            <div class="thumbs">
-              <img src="mockups da app/Login.svg" alt="Mockup app login" />
-              <img src="mockups da app/Tutorial.svg" alt="Mockup app tutorial" />
-            </div>
-          </div>
-        </div>
-      </article>
+    <section id="solucao">
+      <h2>A nossa solução</h2>
+      <p>Desenvolvemos um Inalador Inteligente que regista automaticamente cada utilização, monitoriza a técnica de inalação e envia dados para uma app para facilitar o acompanhamento diário.</p>
+    </section>
 
-      <article class="mockup">
-        <header class="mockup-header">
-          <span class="title">Dashboard do Utilizador</span>
-          <span class="tag">Web 02</span>
-        </header>
-        <div class="preview">
-          <div class="browser">
-            <div class="browser-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-            <div class="wire">
-              <div class="block"></div>
-              <div class="main">
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-              </div>
-            </div>
-          </div>
-          <div class="app-base">
-            <strong>Base da app:</strong>
-            <div class="thumbs">
-              <img src="mockups da app/Dashboard Principal.svg" alt="Mockup app dashboard" />
-              <img src="mockups da app/Dados do Inalador.svg" alt="Mockup app dados do inalador" />
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="mockup">
-        <header class="mockup-header">
-          <span class="title">Histórico + Lembretes</span>
-          <span class="tag">Web 03</span>
-        </header>
-        <div class="preview">
-          <div class="browser">
-            <div class="browser-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-            <div class="wire">
-              <div class="block"></div>
-              <div class="main">
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-              </div>
-            </div>
-          </div>
-          <div class="app-base">
-            <strong>Base da app:</strong>
-            <div class="thumbs">
-              <img src="mockups da app/Histórico.svg" alt="Mockup app histórico" />
-              <img src="mockups da app/Lembretes.svg" alt="Mockup app lembretes" />
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="mockup">
-        <header class="mockup-header">
-          <span class="title">Perfil + Definições</span>
-          <span class="tag">Web 04</span>
-        </header>
-        <div class="preview">
-          <div class="browser">
-            <div class="browser-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-            <div class="wire">
-              <div class="block"></div>
-              <div class="main">
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-              </div>
-            </div>
-          </div>
-          <div class="app-base">
-            <strong>Base da app:</strong>
-            <div class="thumbs">
-              <img src="mockups da app/Perfil.svg" alt="Mockup app perfil" />
-              <img src="mockups da app/Definições.svg" alt="Mockup app definições" />
-            </div>
-          </div>
-        </div>
-      </article>
+    <section class="app-banner" id="app">
+      <h2>App do Inalador</h2>
+      <p>A app oferece lembretes personalizados, gráficos de adesão ao tratamento e partilha segura de relatórios com profissionais de saúde.</p>
+      <div class="buttons">
+        <a href="#">Descarregar para Android</a>
+        <a href="#">Descarregar para iOS</a>
+      </div>
     </section>
   </main>
+
+  <footer>
+    © 2026 Inalador Inteligente • Projeto académico de Formação Empresarial
+  </footer>
 </body>
 </html>
