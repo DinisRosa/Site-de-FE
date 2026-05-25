@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroSmart | Prever a Crise Respiratória</title>
+    <meta name="description" content="Plataforma digital baseada em IA para previsão de exacerbações respiratórias, integrável com o teu inalador atual.">
+    <!-- Google Fonts: Outfit (headings) + DM Sans (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="../imagens/logo_sem_fundo.png" alt="AeroSmart Logo" class="logo-img">
+            </a>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="#como-funciona">Como Funciona</a>
+                <a href="#beneficios">Benefícios</a>
+                <a href="#app">A App</a>
+                <a href="#precos">Preços</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="#precos" class="btn btn-primary btn-sm">Pré-encomendar</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false">
+                    <span class="hamburger-icon">☰</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <!-- Blobs animados — metáfora de respiração -->
+        <div class="hero-blob hero-blob--1" aria-hidden="true"></div>
+        <div class="hero-blob hero-blob--2" aria-hidden="true"></div>
+        <div class="hero-blob hero-blob--3" aria-hidden="true"></div>
+
+        <div class="container hero-content">
+            <div class="hero-text animate-fade-up">
+                <div class="hero-tag">
+                    <span class="hero-tag-dot" aria-hidden="true"></span>
+                    Inteligência Artificial na Saúde Respiratória
+                </div>
+                <h1>Prever a crise respiratória <span class="text-gradient">antes que ela aconteça.</span></h1>
+                <p class="hero-subtitle">Os primeiros sensores acopláveis que transformam qualquer inalador num dispositivo inteligente. A nossa plataforma baseada em IA prevê exacerbações para uma intervenção precoce e uma vida com mais qualidade.</p>
+                <div class="hero-actions">
+                    <a href="#precos" class="btn btn-primary">
+                        Pré-encomendar Agora
+                        <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="#como-funciona" class="btn btn-outline">Descobrir a Tecnologia</a>
+                </div>
+                <div class="hero-social-proof">
+                    <span class="stars" aria-label="5 estrelas">★★★★★</span>
+                    <span>Testado por pacientes e profissionais de saúde.</span>
+                </div>
+            </div>
+            
+            <div class="hero-image animate-fade-left">
+                <div class="hero-composition">
+                    <div class="mockup-container">
+                        <img src="../mockups%20da%20app/Dashboard%20Principal.svg" alt="Dashboard principal da App AeroSmart" loading="lazy">
+                    </div>
+                    <img src="../imagens/inalador_sem_fundo.png" alt="Inalador com Sensor AeroSmart acoplado" class="hero-inalador" loading="lazy">
+                </div>
+                <div class="floating-badge">
+                    <div class="pulse-dot" aria-hidden="true"></div>
+                    <strong>IA Ativa: Risco Baixo</strong>
+                </div>
+                <div class="floating-badge-bottom">
+                    <span class="icon-sm" aria-hidden="true">📊</span>
+                    <div>
+                        <span class="floating-label">Próxima consulta</span>
+                        <strong>Relatório pronto</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Separador ondulado -->
+        <div class="hero-wave" aria-hidden="true">
+            <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z" fill="#004AC6"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Barra de Estatísticas -->
+    <div class="stats-bar">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <span class="stat-icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2L13.09 8.26L20 9.27L15 14.14L16.18 21.02L11 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L11 2Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <strong class="stat-number">74%</strong>
+                <span class="stat-label">das crises são evitáveis com prevenção adequada</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+                <span class="stat-icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="white" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="white" stroke-width="1.5" stroke-linecap="round"/><path d="M21 21V19C20.9993 18.1137 20.7044 17.2528 20.1614 16.5523C19.6184 15.8519 18.8581 15.3516 18 15.13" stroke="white" stroke-width="1.5" stroke-linecap="round"/><path d="M15 3.13C15.8604 3.35031 16.623 3.85071 17.1676 4.55232C17.7122 5.25392 18.0078 6.11683 18.0078 7.005C18.0078 7.89317 17.7122 8.75608 17.1676 9.45768C16.623 10.1593 15.8604 10.6597 15 10.88" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </span>
+                <strong class="stat-number">2.5M+</strong>
+                <span class="stat-label">portugueses com asma ou DPOC</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+                <span class="stat-icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17L12 22L22 17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12L12 17L22 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <strong class="stat-number">3x</strong>
+                <span class="stat-label">menos idas à urgência com monitorização contínua</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+                <span class="stat-icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="5" width="20" height="14" rx="2" stroke="white" stroke-width="1.5"/><path d="M16 5V3C16 2.44772 15.5523 2 15 2H9C8.44772 2 8 2.44772 8 3V5" stroke="white" stroke-width="1.5"/><path d="M6 9H18" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </span>
+                <strong class="stat-number">0€</strong>
+                <span class="stat-label">de mensalidade — App incluída para sempre</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Problema vs Solução -->
+    <section id="solucao" class="problem-solution">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Não esperes pela falta de ar.</h2>
+                <p>O modelo tradicional foca-se em tratar a crise. Nós focamo-nos em evitá-la.</p>
+            </div>
+            
+            <div class="split-grid">
+                <div class="split-card problem animate-on-scroll">
+                    <div class="split-card-header">
+                        <div class="split-card-icon problem-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="9" x2="12" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="17" x2="12.01" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <h3 class="problem-title">O Problema Atual</h3>
+                    </div>
+                    <ul class="check-list check-list--problem">
+                        <li>
+                            <span class="check-icon" aria-hidden="true">✖</span>
+                            <span><strong>Internamentos evitáveis</strong> causados por falta de prevenção atempada.</span>
+                        </li>
+                        <li>
+                            <span class="check-icon" aria-hidden="true">✖</span>
+                            <span><strong>Zero dados concretos</strong> para o médico entre as consultas de rotina.</span>
+                        </li>
+                        <li>
+                            <span class="check-icon" aria-hidden="true">✖</span>
+                            <span><strong>Esquecimento de tomas</strong> e uso de técnica incorreta do inalador.</span>
+                        </li>
+                        <li>
+                            <span class="check-icon" aria-hidden="true">✖</span>
+                            <span><strong>Custos elevados</strong> para pacientes e para o sistema de saúde.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Conector visual -->
+                <div class="split-connector" aria-hidden="true">
+                    <div class="connector-line"></div>
+                    <div class="connector-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="connector-line"></div>
+                </div>
+                
+                <div class="split-card solution animate-on-scroll">
+                    <div class="split-card-header">
+                        <div class="split-card-icon solution-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="solution-title">A Solução AeroSmart</h3>
+                    </div>
+                    <ul class="check-list check-list--solution">
+                        <li>
+                            <span class="check-icon" aria-hidden="true">✔</span>
+                            <span><strong>Previsão de exacerbações</strong> através da análise de Inteligência Artificial.</span>
+                        </li>
+                        <li>
+                            <span class="check-icon" aria-hidden="true">✔</span>
+                            <span><strong>Acompanhamento constante</strong> extra-consulta com partilha de dados médicos.</span>
+                        </li>
+                        <li>
+                            <span class="check-icon" aria-hidden="true">✔</span>
+                            <span><strong>Lembretes inteligentes</strong> e avaliação da técnica de inalação em tempo real.</span>
+                        </li>
+                        <li>
+                            <span class="check-icon" aria-hidden="true">✔</span>
+                            <span><strong>Compatibilidade total:</strong> um pequeno sensor que encaixa no inalador que já usas.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section id="como-funciona" class="how-it-works">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="badge badge-teal">Simples de usar</span>
+                <h2>Pronto em 3 passos.</h2>
+                <p>Sem mudança de hábitos, sem prescrições novas. O AeroSmart integra-se na tua rotina existente.</p>
+            </div>
+
+            <div class="how-it-works-content">
+                <div class="how-it-works-image animate-fade-left">
+                    <div class="inalador-wrapper">
+                        <img src="../imagens/inalador_sem_fundo.png" alt="Inalador com o sensor acoplável AeroSmart" class="step-image">
+                        <div class="inalador-glow" aria-hidden="true"></div>
+                    </div>
+                </div>
+                <div class="steps-vertical">
+                    <div class="step-item animate-on-scroll">
+                        <div class="step-number-circle">
+                            <span>01</span>
+                        </div>
+                        <div class="step-info">
+                            <h3>Acoplar Sensor</h3>
+                            <p>Encaixa o sensor inteligente no inalador que já tens. Baixa barreira de implementação com inaladores existentes no mercado.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-connector-line" aria-hidden="true"></div>
+
+                    <div class="step-item animate-on-scroll">
+                        <div class="step-number-circle">
+                            <span>02</span>
+                        </div>
+                        <div class="step-info">
+                            <h3>Registar na App</h3>
+                            <p>Liga-te à nossa plataforma Cloud de forma segura. A Inteligência Artificial começa a analisar o teu perfil instantaneamente.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-connector-line" aria-hidden="true"></div>
+
+                    <div class="step-item animate-on-scroll">
+                        <div class="step-number-circle">
+                            <span>03</span>
+                        </div>
+                        <div class="step-info">
+                            <h3>Usar como sempre</h3>
+                            <p>O doente não muda a rotina. Recebe alertas automatizados dias antes de uma possível crise respiratória.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section id="beneficios" class="benefits-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="badge badge-teal">Para Pacientes e Médicos</span>
+                <h2>Muito mais que um lembrete.</h2>
+                <p>Uma plataforma SaMD (Software as a Medical Device) pensada para transformar a gestão de doenças crónicas.</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card animate-on-scroll">
+                    <div class="icon-box icon-box--blue" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4C14 4 6 8 6 15C6 19.4183 9.58172 23 14 23C18.4183 23 22 19.4183 22 15C22 8 14 4 14 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 23V14M10 14L14 10L18 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Previsão por IA</h3>
+                    <p>Previsão de exacerbações antes de ocorrerem episódios graves, recorrendo à análise de padrões por Inteligência Artificial.</p>
+                </div>
+                
+                <div class="benefit-card animate-on-scroll">
+                    <div class="icon-box icon-box--teal" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 20L10 14L14 18L20 10L24 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Redução de Internamentos</h3>
+                    <p>Redução drástica do número de internamentos evitáveis e consequente diminuição de custos hospitalares nas urgências.</p>
+                </div>
+                
+                <div class="benefit-card animate-on-scroll">
+                    <div class="icon-box icon-box--rose" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 24S4 18 4 11C4 8.23858 6.23858 6 9 6C10.7854 6 12.3516 6.92617 13.2949 8.30952L14 9.5L14.7051 8.30952C15.6484 6.92617 17.2146 6 19 6C21.7614 6 24 8.23858 24 11C24 18 14 24 14 24Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Qualidade de Vida</h3>
+                    <p>Melhoria contínua da qualidade de vida do doente crónico respiratório e aumento consistente da sua adesão terapêutica.</p>
+                </div>
+                
+                <div class="benefit-card animate-on-scroll">
+                    <div class="icon-box icon-box--amber" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M13 4L5 14H13L11 24L23 12H15L13 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Baixa Barreira de Uso</h3>
+                    <p>Baixa barreira de implementação, através da integração com sensores acopláveis a inaladores que já existem no mercado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- A App em Destaque -->
+    <section id="app" class="app-features">
+        <div class="app-features-bg" aria-hidden="true"></div>
+        <div class="container text-center" style="position:relative; z-index:1;">
+            <div class="section-header animate-on-scroll">
+                <span class="badge badge-light">Disponível iOS & Android</span>
+                <h2>Uma interface focada no teu bem-estar.</h2>
+                <p>Ligação Bluetooth em tempo real. Tudo o que precisas de saber, num design intuitivo e limpo.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-mockup animate-on-scroll">
+                    <div class="phone-frame">
+                        <img src="../mockups%20da%20app/Hist%C3%B3rico.svg" alt="Ecrã de Histórico da App AeroSmart" loading="lazy">
+                    </div>
+                    <div class="feature-mockup-text">
+                        <h3>Histórico Clínico</h3>
+                        <p>Acompanha a tua evolução ao longo de meses num gráfico simples e partilhável.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-mockup feature-mockup--center animate-on-scroll">
+                    <div class="phone-frame phone-frame--featured">
+                        <img src="../mockups%20da%20app/Registro%20Inalação.svg" alt="Ecrã de Registo de Inalação da App AeroSmart" loading="lazy">
+                    </div>
+                    <div class="feature-mockup-text">
+                        <h3>Registo de Inalação</h3>
+                        <p>Feedback imediato se a inalação foi feita corretamente e registo automático.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-mockup animate-on-scroll">
+                    <div class="phone-frame">
+                        <img src="../mockups%20da%20app/Lembretes.svg" alt="Ecrã de Lembretes da App AeroSmart" loading="lazy">
+                    </div>
+                    <div class="feature-mockup-text">
+                        <h3>Lembretes Ativos</h3>
+                        <p>Personaliza alarmes e notificações para garantir 100% de adesão terapêutica.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parcerias B2B -->
+    <section id="parcerias" class="b2b-section">
+        <div class="b2b-pattern" aria-hidden="true"></div>
+        <div class="container" style="position:relative; z-index:1;">
+            <div class="b2b-content animate-on-scroll">
+                <span class="badge badge-light-outline">Para Hospitais, Clínicas e Seguradoras</span>
+                <h2>Invista na prevenção.<br>Reduza o risco clínico.</h2>
+                <p>O nosso modelo SaaS foi desenhado para instituições de saúde e seguradoras que pretendem focar-se na prevenção. Pague pela redução de internamentos dispendiosos e melhor gestão clínica, evitando atuar de forma reativa quando o doente já está em crise.</p>
+                
+                <div class="b2b-highlights">
+                    <div class="b2b-highlight">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polyline points="20 6 9 17 4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Dashboard clínico centralizado
+                    </div>
+                    <div class="b2b-highlight">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polyline points="20 6 9 17 4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Relatórios e alertas em tempo real
+                    </div>
+                    <div class="b2b-highlight">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polyline points="20 6 9 17 4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Integração com sistemas HIS/EMR
+                    </div>
+                </div>
+
+                <div class="b2b-actions">
+                    <a href="#" class="btn btn-white">Saber mais sobre Parcerias</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Testemunho -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="badge badge-teal">Prova de Confiança</span>
+                <h2>A voz de quem trata.</h2>
+            </div>
+            <div class="testimonial animate-on-scroll">
+                <div class="quote-decoration" aria-hidden="true">"</div>
+                <p class="quote">Como pneumologista, a maior dificuldade é não saber o que acontece entre as consultas. O AeroSmart mudou isso. A capacidade de prever crises graças à IA permite-me intervir proativamente em vez de reativamente — e isso faz toda a diferença na vida dos meus doentes.</p>
+                <div class="author-info">
+                    <div class="author-avatar" aria-hidden="true">DR</div>
+                    <div class="author-text">
+                        <strong>Dr. Ricardo Mendes</strong>
+                        <span>Pneumologista, Hospital Central de Lisboa</span>
+                    </div>
+                </div>
+                
+                <div class="trust-badges">
+                    <span class="badge trust-badge">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.545 5.09H13L9.727 7.41L10.91 11.5L7 8.91L3.09 11.5L4.273 7.41L1 5.09H5.455L7 1Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Em Conformidade com RGPD
+                    </span>
+                    <span class="badge trust-badge">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.545 5.09H13L9.727 7.41L10.91 11.5L7 8.91L3.09 11.5L4.273 7.41L1 5.09H5.455L7 1Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Software Dispositivo Médico (SaMD)
+                    </span>
+                    <span class="badge trust-badge">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.545 5.09H13L9.727 7.41L10.91 11.5L7 8.91L3.09 11.5L4.273 7.41L1 5.09H5.455L7 1Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Bluetooth Low Energy
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="precos" class="pricing-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Garante a tua tranquilidade.</h2>
+                <p>Junta-te aos primeiros utilizadores e transforma a forma como geres a tua saúde respiratória.</p>
+            </div>
+            
+            <div class="pricing-card animate-on-scroll">
+                <div class="pricing-badge">✦ Lançamento Exclusivo</div>
+                <h3>Kit AeroSmart Base</h3>
+                <p class="pricing-subtitle">O essencial para ti e para o teu médico.</p>
+                
+                <div class="price">
+                    <span class="price-currency">€</span>49<span class="price-cents">,99</span>
+                </div>
+                <p class="price-note">pagamento único · sem subscrições · sem surpresas</p>
+                
+                <ul class="pricing-features">
+                    <li><span class="check-green" aria-hidden="true">✔</span> 1x Sensor Inteligente Acoplável</li>
+                    <li><span class="check-green" aria-hidden="true">✔</span> Acesso vitalício à App AeroSmart (iOS & Android)</li>
+                    <li><span class="check-green" aria-hidden="true">✔</span> Previsão de crises baseada em IA</li>
+                    <li><span class="check-green" aria-hidden="true">✔</span> Relatórios ilimitados para o médico</li>
+                    <li><span class="check-green" aria-hidden="true">✔</span> Sem subscrições mensais</li>
+                </ul>
+                
+                <a href="#" class="btn btn-primary btn-full">
+                    Pré-encomendar Kit Base
+                    <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <p class="guarantee-note">🔒 Garantia de devolução de 30 dias após entrega.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Perguntas Frequentes</h2>
+                <p>Tudo o que precisas de saber sobre o AeroSmart.</p>
+            </div>
+            
+            <div class="faq-list animate-on-scroll">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        O AeroSmart funciona com o meu inalador atual?
+                        <span class="faq-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer" role="region">
+                        <p>Sim. O nosso sensor foi desenhado para ser universal e acoplar-se aos modelos de inaladores mais comuns do mercado. Não precisas de pedir ao teu médico para mudar a tua prescrição.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Como é que a Inteligência Artificial prevê uma crise?
+                        <span class="faq-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer" role="region">
+                        <p>O algoritmo aprende os teus padrões de inalação, a frequência de utilização e relaciona-os com os teus sintomas registados na app. Se detetar desvios ou um padrão que historicamente antecede exacerbações, emite um alerta preventivo.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        O meu médico tem acesso automático aos meus dados?
+                        <span class="faq-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer" role="region">
+                        <p>Não automaticamente. Os teus dados são privados (RGPD). No entanto, podes partilhar um relatório clínico encriptado com o teu médico com apenas um clique diretamente na app antes da consulta.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        A app tem algum custo mensal?
+                        <span class="faq-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer" role="region">
+                        <p>Não. Na compra do Sensor Acoplável, o acesso à aplicação e a todas as suas funcionalidades de Inteligência Artificial é totalmente gratuito e sem mensalidades. Um pagamento único, para sempre.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Os meus dados estão seguros?
+                        <span class="faq-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer" role="region">
+                        <p>Totalmente. O AeroSmart é desenvolvido em total conformidade com o Regulamento Geral de Proteção de Dados (RGPD). Os dados clínicos são encriptados end-to-end e alojados em servidores europeus certificados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo-link">
+                        <div class="logo-mark logo-mark--sm" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="34" height="34" rx="9" fill="url(#logoGradFooter)"/>
+                                <path d="M7 24C7 24 9.5 16 17 16C24.5 16 27 8 27 8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="17" cy="22" r="4.5" fill="white" fill-opacity="0.95"/>
+                                <defs>
+                                    <linearGradient id="logoGradFooter" x1="0" y1="0" x2="34" y2="34">
+                                        <stop offset="0%" stop-color="#1D4ED8"/>
+                                        <stop offset="100%" stop-color="#006B5F"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <strong class="footer-logo-text">AeroSmart</strong>
+                    </a>
+                    <p>Tecnologia preditiva para doenças crónicas respiratórias. Prever para proteger.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <strong>Produto</strong>
+                        <a href="#app">A App</a>
+                        <a href="#beneficios">Benefícios</a>
+                        <a href="#precos">Preços</a>
+                        <a href="#parcerias">Parcerias B2B</a>
+                    </div>
+                    <div class="footer-col">
+                        <strong>Suporte</strong>
+                        <a href="#faq">FAQ</a>
+                        <a href="#como-funciona">Como Funciona</a>
+                        <a href="#">Contacto</a>
+                    </div>
+                    <div class="footer-col">
+                        <strong>Legal</strong>
+                        <a href="#">Privacidade</a>
+                        <a href="#">Termos de Serviço</a>
+                        <a href="#">Conformidade RGPD</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="academic-note">
+                <p><strong>Projeto académico desenvolvido para fins curriculares de Formação Empresarial — Universidade de Aveiro.</strong></p>
+                <p>Desenvolvido por: Lara Rodrigues (A107282) · Dinis Rosa (A107159) · Maria Carneiro (A107242) · Sofia Saraiva (A107249)</p>
+                <p>© 2026 AeroSmart. Todos os direitos reservados. O conteúdo deste site é fictício e criado para fins académicos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CTA Sticky Mobile -->
+    <div class="sticky-cta" id="stickyCta">
+        <a href="#precos" class="btn btn-primary btn-full">Pré-encomendar — 49,99€</a>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+</body>
+</html>
