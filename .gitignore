@@ -1,0 +1,42 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
+# Node (se usado no futuro)
+node_modules/
+npm-debug.log
+package-lock.json
+yarn.lock
+
+# Ficheiros temporários
+*.tmp
+*.temp
+*.bak
+*.backup
+*.log
+
+# Ficheiros de sistema
+Thumbs.db
+.directory
+
+# Compressados (não devem estar no repo)
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# Versões antigas/duplicadas de assets
+*_old.*
+*_backup.*
+*_v[0-9]*.*
