@@ -2,6 +2,20 @@
 
 ![AeroSmart](imagens/logo_sem_fundo.png)
 
+## 👥 Autores
+
+| Nome | Número de Aluno | Função |
+|------|-----------------|--------|
+| **Lara Rodrigues** | A107282 | Estratégia & Copywriting |
+| **Dinis Rosa** | A107159 | Front-End & UX/UI |
+| **Maria Carneiro** | A107242 | Design & Mockups |
+| **Sofia Saraiva** | A107249 | Investigação & Validação Clínica |
+
+**Unidade Curricular:** Formação Empresarial — Universidade de Aveiro  
+**Ano Letivo:** 2025/2026
+
+---
+
 ## 📋 Sobre o Projeto
 
 **AeroSmart** é uma plataforma digital inovadora baseada em Inteligência Artificial para previsão de exacerbações respiratórias. Integra-se com sensores acopláveis a inaladores convencionais, permitindo o monitoramento em tempo real da utilização de medicação e a previsão de crises antes que estas ocorram.
@@ -25,24 +39,27 @@ Demonstrar a viabilidade comercial e técnica do AeroSmart através de:
 Site-de-FE/
 ├── site/
 │   ├── index.html          # Página principal (SPA - Single Page Application)
-│   ├── styles.css          # Design system e estilos (vanilla CSS)
+│   ├── styles.css          # Design system e estilos (vanilla CSS, ~1876 linhas)
 │   └── main.js             # Interatividade (vanilla JavaScript)
 ├── imagens/
-│   ├── logo_sem_fundo.png  # Logo profissional
-│   ├── inalador_sem_fundo.png  # Mockup do sensor
-│   └── logo.jpeg           # Variante alternativa
-├── mockups da app/
+│   ├── logo_sem_fundo.png  # Logo profissional (usado no header)
+│   ├── logo.jpeg           # Variante alternativa do logo
+│   ├── inalador.png        # Foto do inalador (fundo)
+│   └── inalador_sem_fundo.png  # Inalador recortado (usado no site)
+├── mockups da app/         # Ecrãs SVG da aplicação mobile
 │   ├── Dashboard Principal.svg
 │   ├── Histórico.svg
 │   ├── Lembretes.svg
 │   ├── Registro Inalação.svg
-│   └── ... (outras telas)
-├── material/               # Documentação e análises
-│   ├── BMC.txt            # Business Model Canvas
-│   └── PDFs e worksheets
-├── palete_app.txt         # Definição de cores e paleta
-├── instrucoes-site.md     # Especificações e contexto do projeto
-└── README.md              # Este arquivo
+│   ├── Dados do Inalador.svg
+│   ├── Definições.svg
+│   ├── Editar Perfil.svg
+│   ├── Login.svg
+│   ├── Perfil.svg
+│   └── Tutorial.svg
+├── Relatório.pdf           # Relatório académico do projeto
+├── .gitignore
+└── README.md               # Este arquivo
 ```
 
 ---
@@ -56,23 +73,24 @@ Site-de-FE/
 - Indicador de confiança ("Testado por profissionais de saúde")
 
 ### Secções de Conteúdo
-1. **Barra de Estatísticas** — Impacto clínico (internamentos evitados, qualidade de vida)
-2. **Problema & Solução** — Contraste visual antes/depois
-3. **Como Funciona** — 3 passos simples com animações
-4. **Benefícios** — 4 pilares value-based (Previsão, Redução de Internamentos, QoL, Simplicidade)
-5. **Secção App** — Mockups interativos das telas principais
-6. **Testemunho** — Validação por pneumologista (fictício mas realista)
-7. **Parcerias B2B** — Modelo SaaS para instituições de saúde
-8. **Pricing** — Apresentação simples e transparente
-9. **FAQ** — Acordeão interativo com objeções comuns
+1. **Barra de Estatísticas** — Impacto clínico (74% crises evitáveis, 2.5M+ doentes, 3x menos urgências, 9,99€/mês)
+2. **Problema & Solução** — Contraste visual antes/depois com grid dividido
+3. **Como Funciona** — 3 passos simples com animações (Acoplar → Registar → Usar)
+4. **Benefícios** — 4 pilares value-based (Previsão IA, Redução Internamentos, QoL, Simplicidade)
+5. **Secção App** — Mockups interativos de 3 ecrãs (Histórico, Registo Inalação, Lembretes)
+6. **Parcerias B2B** — Modelo SaaS para hospitais, clínicas e seguradoras
+7. **Testemunho** — Validação por pneumologista (fictício mas realista) + trust badges RGPD/SaMD/BLE
+8. **Pricing** — 3 planos: Sensor 49,99€ (único) · App 9,99€/mês (destaque) · Clinical 19,99€/mês/paciente
+9. **FAQ** — Acordeão interativo com 5 perguntas frequentes
 
-### Interatividade
-- ✅ Menu responsivo com mobile hamburger
-- ✅ FAQ acordeão com animações suaves
-- ✅ Smooth scroll para âncoras
-- ✅ Animações de scroll (IntersectionObserver)
-- ✅ Contadores animados na barra de stats
-- ✅ CTA fixa no rodapé (mobile)
+### Interatividade (`main.js`)
+- ✅ Menu responsivo com mobile hamburger (fechar ao clicar fora)
+- ✅ FAQ acordeão com animações suaves (1 item aberto de cada vez)
+- ✅ Smooth scroll para âncoras (offset 85px para header fixo)
+- ✅ Header com sombra dinâmica ao fazer scroll
+- ✅ Animações de scroll (IntersectionObserver com delays escalonados)
+- ✅ Contadores animados na barra de stats (countUp)
+- ✅ CTA fixa no rodapé em mobile (oculta quando pricing está visível)
 
 ---
 
@@ -84,26 +102,34 @@ Site-de-FE/
 - **Secundário:** `#1D4ED8` (Azul claro — profundidade)
 - **Fundo:** `#F7F9FB` (Cinzento muito claro)
 - **Texto:** `#191C1E` (Cinzento escuro)
+- **Footer/App:** `#0F1318` (Preto escuro)
 
 ### Tipografia
 - **Headings:** [Outfit](https://fonts.google.com/specimen/Outfit) (400–900)
 - **Body:** [DM Sans](https://fonts.google.com/specimen/DM+Sans) (300–600)
 
+### Animações
+- `breathe` — blobs do hero (metáfora respiratória)
+- `float` — inalador e badges flutuantes
+- `pulse` — dot animado no hero tag
+- `fadeUp` / `fadeLeft` — entradas de secções
+
 ### Componentes
-- **Botões:** Primário (gradiente), Outline, CTA com ícones
-- **Cards:** Sombras coloridas, borders subtis, animações no hover
-- **Badges:** Ponto animado, números em gradientes
-- **Separadores:** SVG wave animations
+- **Botões:** Primário (gradiente azul), Outline, White, com ícone animado
+- **Cards:** Benefit cards com barra colorida no hover, Pricing cards com badge "Mais Popular"
+- **Badges:** Teal, Light, Light-outline, Trust badges
+- **Phone frames:** Glassmorphism com hover lift; frame central elevado
+- **Split grid:** Problema vs Solução com conector visual central
 
 ---
 
 ## 💻 Tecnologias Utilizadas
 
-- **HTML5** — Semântica e acessibilidade
-- **CSS3 Vanilla** — Design responsivo, animações, glassmorphism
-- **JavaScript Vanilla** — Interatividade sem dependências externas
-- **Google Fonts** — Tipografia premium
-- **SVG** — Mockups e ícones vetoriais
+- **HTML5** — Semântica e acessibilidade (643 linhas)
+- **CSS3 Vanilla** — Design responsivo, animações, glassmorphism (1876 linhas)
+- **JavaScript Vanilla** — Interatividade sem dependências externas (217 linhas)
+- **Google Fonts** — Outfit + DM Sans
+- **SVG** — Mockups da app e ícones inline
 
 **Sem frameworks!** Projeto desenvolvido com HTML, CSS e JavaScript puros para máxima performance e controlo total do código.
 
@@ -111,23 +137,24 @@ Site-de-FE/
 
 ## 📱 Responsividade
 
-O site segue a abordagem **Mobile-First**:
-- ✅ Layout fluido até 1440px+
-- ✅ Menu hamburger em dispositivos < 768px
-- ✅ Ajustes de tamanho de imagens e tipografia
-- ✅ Touch-friendly buttons e spacing
+O site segue a abordagem **Mobile-First** com 3 breakpoints:
 
-Teste no seu telemóvel ou use as DevTools do navegador (F12 → Modo Dispositivo).
+| Breakpoint | Comportamento principal |
+|------------|------------------------|
+| `≤ 1024px` | Hero em coluna única, split-grid vertical, stat-dividers ocultos |
+| `≤ 768px`  | Menu hamburger ativo, sticky CTA visível, features-grid em 1 coluna |
+| `≤ 480px`  | Hero actions em coluna, floating badges ocultos, inalador redimensionado |
 
 ---
 
 ## ♿ Acessibilidade
 
-- ✅ ARIA labels em elementos interativos
+- ✅ ARIA labels em elementos interativos (`aria-expanded`, `aria-label`)
 - ✅ Contraste adequado entre cores (WCAG AA)
 - ✅ Navegação por teclado suportada
-- ✅ Semântica HTML5 apropriada
-- ✅ Imagens com alt text descritivo
+- ✅ Semântica HTML5 apropriada (`header`, `nav`, `section`, `footer`)
+- ✅ Imagens com `alt` text descritivo
+- ✅ `aria-hidden="true"` em elementos decorativos
 
 ---
 
@@ -143,30 +170,23 @@ Teste no seu telemóvel ou use as DevTools do navegador (F12 → Modo Dispositiv
 
 2. Abra `site/index.html` diretamente no navegador:
    ```bash
-   open site/index.html  # macOS
-   start site/index.html # Windows
    xdg-open site/index.html # Linux
+   open site/index.html     # macOS
+   start site/index.html    # Windows
    ```
 
-   Ou use um servidor local:
+   Ou use um servidor local (recomendado para evitar problemas com paths relativos):
    ```bash
    # Python 3
    python -m http.server 8000
-   
-   # Python 2
-   python -m SimpleHTTPServer 8000
-   
-   # Node.js (se tiver http-server instalado)
-   http-server
+   # Depois acede a http://localhost:8000/site/
    ```
-
-   Depois aceda a `http://localhost:8000/site/` no navegador.
 
 ### Estrutura de Ficheiros
 - O ficheiro principal é `site/index.html`
 - Todos os estilos estão em `site/styles.css`
 - A interatividade está em `site/main.js`
-- Imagens referenciam a pasta `imagens/` (caminhos relativos)
+- Imagens referenciam `../imagens/` e `../mockups da app/` (caminhos relativos)
 
 ---
 
@@ -174,52 +194,35 @@ Teste no seu telemóvel ou use as DevTools do navegador (F12 → Modo Dispositiv
 
 Este projeto foi desenvolvido para a unidade curricular **Formação Empresarial** com o objetivo de validar a viabilidade de um produto de HealthTech através de uma landing page comercial profissional.
 
-### 👥 Autores do Projeto
-
-| Nome | Número de Aluno | Função |
-|------|-----------------|--------|
-| **Lara Rodrigues** | A107282 | Estratégia & Copywriting |
-| **Dinis Rosa** | A107159 | Front-End & UX/UI |
-| **Maria Carneiro** | A107242 | Design & Mockups |
-| **Sofia Saraiva** | A107249 | Investigação & Validação Clínica |
-
----
-
-## 📖 Documentação Adicional
-
-- **`instrucoes-site.md`** — Especificações completas, contexto do AeroSmart, guia de design
-- **`palete_app.txt`** — Definição de paleta de cores e páginas referenciadas
-- **`material/`** — Business Model Canvas (BMC), Value Proposition Canvas, worksheets
-
 ---
 
 ## 📝 Notas de Desenvolvimento
 
 ### Decisões Técnicas
 
-1. **Sem Frameworks** — Opted for vanilla HTML/CSS/JS para demonstrar profundidade técnica e controlo fino.
+1. **Sem Frameworks** — Vanilla HTML/CSS/JS para demonstrar profundidade técnica e controlo fino.
 2. **Mobile-First** — Layout começa no mobile (< 768px) e expande para desktop.
-3. **Performance** — Imagens otimizadas (PNGs comprimidos), lazy loading, CSS compiled.
+3. **Performance** — Imagens otimizadas (PNGs comprimidos), `loading="lazy"` nos SVGs, `passive: true` nos scroll listeners.
 4. **Acessibilidade** — WCAG 2.1 AA como mínimo.
-5. **SEO** — Meta tags, OG tags, estrutura semântica.
+5. **SEO** — Meta tags, estrutura semântica, `lang="pt"`.
 
 ### Destaques Técnicos
 
-- **IntersectionObserver** para animações eficientes de scroll
-- **CSS Custom Properties** para design tokens reutilizáveis
-- **SVG Wave** para separadores animados
+- **IntersectionObserver** para animações eficientes de scroll (sem scroll listeners pesados)
+- **CSS Custom Properties** para design tokens reutilizáveis (cores, sombras, radii, transições)
+- **SVG Wave** para separador entre hero e stats bar
 - **Animações CSS** com `cubic-bezier` smoothing
-- **Glassmorphism** subtil para profundidade visual
+- **Glassmorphism** com `backdrop-filter: blur()` no header e B2B card
 
 ---
 
 ## 🔍 Checklist de Conformidade
 
 - ✅ HTML5 semântico
-- ✅ CSS responsivo (Mobile-First)
+- ✅ CSS responsivo (Mobile-First, 3 breakpoints)
 - ✅ JavaScript sem dependências
 - ✅ Acessibilidade WCAG AA
-- ✅ Performance otimizada
+- ✅ Performance otimizada (lazy loading, passive listeners)
 - ✅ Documentação completa
 - ✅ Contexto académico referenciado
 - ✅ Imagens optimizadas
@@ -233,12 +236,6 @@ Não é permitido uso comercial sem autorização dos autores.
 
 ---
 
-## 📞 Contacto & Suporte
-
-Para questões sobre o projeto, favor contactar qualquer um dos autores através dos dados constantes na sua instituição académica.
-
----
-
 **Versão:** 2.0 — Desktop & Mobile Optimized  
-**Última Atualização:** Junho 2025  
+**Última Atualização:** Junho 2026  
 **Status:** ✅ Pronto para Apresentação Académica
